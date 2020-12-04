@@ -7,10 +7,9 @@ const Main = () => {
       <nav>
         <h1>React Crud</h1>
         <h4>Bonjour {firebase.auth().currentUser.displayName}</h4>
-        <button>
         <div onClick={() => firebase.auth().signOut()}>Se déconnecter</div>
-        </button>
       </nav>
+      {/* app component */}
     </main>
   )
 }

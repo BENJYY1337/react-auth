@@ -1,16 +1,15 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDMpW6Mar7TPJSiMDdIrs05T0fRELgezVs",
-  authDomain: "react-auth-ca01f.firebaseapp.com",
-
-  // projectId: "react-auth-ca01f",
-  // storageBucket: "react-auth-ca01f.appspot.com",
-  // messagingSenderId: "1015499013261",
-  // appId: "1:1015499013261:web:bf56aeff659969f22cb6c4"
+  apiKey: "AIzaSyA4wDktmix3h-uplpwog89tf1ynzxpAL_k",
+  authDomain: "react-video-auth.firebaseapp.com",
+  databaseURL: "https://react-video-auth.firebaseio.com",
+  projectId: "react-video-auth",
+  storageBucket: "react-video-auth.appspot.com",
+  messagingSenderId: "708497657186",
+  appId: "1:708497657186:web:a70c884bf76f86021e703b"
 };
-
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
 export default firebase

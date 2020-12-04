@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import firebase from './utils/firebaseConfig'
 import Main from './components/Main'
-import { StyledFirebaseAuth } from 'react-firebaseui'
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
 const App = () => {
-
-  const [isSignedIn, setSignedIn] = useState(false)
+  const [isSignedIn, setIsSignedIn] = useState(false)
 
   const uiConfig = {
     signInFlow: "popup",
@@ -21,13 +20,13 @@ const App = () => {
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
-      setSignedIn(!!user)
+      setIsSignedIn(!!user)
       console.log(user)
     })
   }, [])
 
   return (
-    <div className="app" style={{ textAlign: 'center' }}>
+    <div className="app" style={{textAlign: 'center'}}>
       {isSignedIn ? (
         <Main />
       ) : (
